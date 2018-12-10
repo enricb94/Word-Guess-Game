@@ -1,0 +1,31 @@
+body
+{
+    background-image: url(../images/image1.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+#fancy{
+    font-family: 'Bungee', cursive;
+    font-size: 120px;
+    text-align:center;
+    color:rgb(0, 19, 128);
+    
+}
+#winter, #edition{
+    font-family: 'Pacifico', cursive;
+    font-size:90px;
+}
+
+#winter{color:rgb(0, 166, 255);float:right;}
+#edition{color:rgb(0, 19, 128);float:right;}
+#bottom-fancy{margin-right:10%;}
+
+.text
+{
+    color:rgb(0, 19, 128);
+    font-size:30px;
+    font-family: 'Bungee', cursive;
+}

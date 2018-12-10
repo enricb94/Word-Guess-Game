@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guess the Word!</title>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Bungee|Lobster|Pacifico" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="container2">
+            <div id="fancy">Word Guess Game</div>
+            <div id="bottom-fancy">
+                <div id="edition">Edition</div>
+                <div id="winter"> Winter &nbsp; </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="assets/images/image2.png">
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="text">Press any key to get started!</div>
+                    <div class="text">Wins: <span class="text" id="win">0</span></div>
+                    <br>
+                    <div class="text">Current Word</div>
+                    <div class="text" id="actualword">word</div>
+                    <br>
+                    <div class="text">Number of guesses remaining:</div>
+                    <div class="text" id="guesses">15</div>
+                    <br>
+                    <div class="text">Letters already used:</div>
+                    <div class="text" id="letters"></div>
+                    <br><br><br><br>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/javascript/game.js"></script>
+    </body>
+</html>
