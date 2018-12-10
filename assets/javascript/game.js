@@ -23,7 +23,7 @@ String.prototype.replaceAt=function(index, replacement) {
 document.onkeyup=function(event){
     userKey = event.key;
     // alert("you pressed the " + userKey + " key")
-    if ("abcdefghijklmnopqrstuvwyz".includes(userKey)){
+    if ("abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(userKey)){
         if (computerWord.includes(userKey))
         {
         // alert("the key " + userKey + " is included in the word " + computerWord)
