@@ -97,7 +97,7 @@ document.onkeyup=function(event)
             document.getElementById("actualword").innerHTML = totalSpaces 
             guesses=15; //resetting the amount of guesses to the initial value.
             document.getElementById("guesses").innerHTML = guesses;
-            document.getElementById("letters").innerHTML = "" //resetting the guessed letters to none.
+            document.getElementById("letters").innerHTML = "->" //resetting the guessed letters to none.
         }
         
         if (guesses == 0)
@@ -111,7 +111,7 @@ document.onkeyup=function(event)
             document.getElementById("actualword").innerHTML = totalSpaces
             guesses=15;
             document.getElementById("guesses").innerHTML = guesses;
-            document.getElementById("letters").innerHTML = ""
+            document.getElementById("letters").innerHTML = "->"
         }
     }
 
