@@ -7,6 +7,7 @@ var blankSpaces = "";
 var array = [];
 var guesses = 15;
 var win=0;
+var lose=0;
 var userKey;
 
 
@@ -39,7 +40,7 @@ document.onkeyup=function(event)
     userKey = event.key;
 
     //Making sure that the key pressed is a letter and not something else.
-    if ("abcdefghijklmnopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(userKey))
+    if ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".includes(userKey))
     {
         
         if (computerWord.includes(userKey))
@@ -102,6 +103,8 @@ document.onkeyup=function(event)
         if (guesses == 0)
         {
             alert("Sorry, you lost!");
+            lose += 1;
+            document.getElementById("lose").innerHTML = lose;
             blankSpaces = "";
             computerWord = randomWord();
             totalSpaces = underScore();
