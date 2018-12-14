@@ -5,7 +5,7 @@ var arrayOfWords=["blizzard","sledge","snowboard","freezing","mistletoe","snowma
 var userKey;
 var blankSpaces = "";
 var array = [];
-var guesses = 15;
+var guesses = 10;
 var win=0;
 var lose=0;
 var userKey;
@@ -73,16 +73,11 @@ document.onkeyup=function(event)
         
 
             //I want to make sure the key pressed was not pressed already, and substract 1 to the variable "guesses" if the key pressed is not part of the computerWord.
-        if (!computerWord.includes(userKey) && !document.getElementById("letters").innerHTML.includes(userKey)) 
+        if (!(computerWord.includes(userKey)) && !(document.getElementById("letters").innerHTML.includes(userKey))) 
         {
             guesses -= 1;
             document.getElementById("guesses").innerHTML = guesses;
-        }
-
-
-        if (!document.getElementById("letters").innerHTML.includes(userKey))
-        {
-        document.getElementById("letters").innerHTML += userKey + ", ";
+            document.getElementById("letters").innerHTML += userKey + ", ";
         }
         
         //Once all of the underscores (_) from the totalSpaces variable are changed into letters, then it should equal the value of the computerWord.
@@ -95,9 +90,9 @@ document.onkeyup=function(event)
             computerWord = randomWord(); //generating a new word.
             totalSpaces = underScore(); //generating the word again with only underscores.
             document.getElementById("actualword").innerHTML = totalSpaces 
-            guesses=15; //resetting the amount of guesses to the initial value.
+            guesses=10; //resetting the amount of guesses to the initial value.
             document.getElementById("guesses").innerHTML = guesses;
-            document.getElementById("letters").innerHTML = "->" //resetting the guessed letters to none.
+            document.getElementById("letters").innerHTML = "- " //resetting the guessed letters to none.
         }
         
         if (guesses == 0)
@@ -109,9 +104,9 @@ document.onkeyup=function(event)
             computerWord = randomWord();
             totalSpaces = underScore();
             document.getElementById("actualword").innerHTML = totalSpaces
-            guesses=15;
+            guesses=10;
             document.getElementById("guesses").innerHTML = guesses;
-            document.getElementById("letters").innerHTML = "->"
+            document.getElementById("letters").innerHTML = "- "
         }
     }
 
